@@ -8,39 +8,69 @@ import Button from 'react-bootstrap/Button';
 function Converter() {
     return (
         <div>
-            <NavBar/>
-            <Container className="mt-5">
-                <Row>
-                    <Col>
+            <div>
+                <NavBar/>
+            </div>
+
+            <div id="page-title" className="mt-2">
+                <h3>Conveter</h3>
+            </div>
+
+            <div id="page-main">
+                <Container className="mt-1">
+                    <Row id="From row">
                         <Form>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Example textarea</Form.Label>
-                                <Form.Control as="textarea" rows={10}/>
+                                <Form.Control as="textarea" rows={5}/>
                             </Form.Group>
                         </Form>
-                    </Col>
-                    <Col>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                            <Form.Label>Example textarea</Form.Label>
-                            <Form.Control as="textarea" rows={10}/>
-                        </Form.Group>
-                    </Col>
-                </Row>
-                <Row className="float-md-end">
-                    <Col>
-                        <Button variant="primary" type="submit" className="ms-2">
-                            Submit
-                        </Button>
-                        <Button variant="primary" type="submit" className="ms-2">
-                            Submit
-                        </Button>
-                        <Button variant="primary" type="submit" className="ms-2">
-                            Submit
-                        </Button>
-                    </Col>
-                </Row>
+                    </Row>
 
-            </Container>
+                    <Row id="button-row">
+                        <Col>
+                            <Button variant="primary" type="submit" className="ms-2">
+                                Submit
+                            </Button>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Form>
+                            <Form.Group>
+                                <Form.Control
+                                    className="mt-3"
+                                    type="text"
+                                    placeholder="Disabled input"
+                                    aria-label="Disabled input example"
+                                    disabled
+                                    readOnly
+                                />
+                                <Form.Control
+                                    className="mt-3"
+                                    type="text"
+                                    placeholder="Disabled input"
+                                    aria-label="Disabled input example"
+                                    disabled
+                                    readOnly
+                                />
+                                <Form.Control
+                                    className="mt-3"
+                                    type="text"
+                                    placeholder="Disabled input"
+                                    aria-label="Disabled input example"
+                                    disabled
+                                    readOnly
+                                />
+                            </Form.Group>
+
+                        </Form>
+
+
+                    </Row>
+
+
+                </Container>
+            </div>
         </div>
     );
 }
